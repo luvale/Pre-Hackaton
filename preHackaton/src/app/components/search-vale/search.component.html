@@ -1,6 +1,7 @@
-    <nz-input-group [nzSuffix]="suffixIconSearch">
-      <input type="text" nz-input placeholder="input search text" />
-    </nz-input-group>
-    <ng-template #suffixIconSearch>
+    
+<nz-input-group [nzSuffix]="suffixIconSearch">
+    <input #search (keyup)="searchFunction(search.value)" type="text" nz-input placeholder="input search text" />
+</nz-input-group>
+<ng-template #suffixIconSearch>
       <i nz-icon nzType="search"></i>
-    </ng-template>    
+</ng-template>    
