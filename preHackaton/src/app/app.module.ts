@@ -21,6 +21,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 // NUESTROS COMPONENTES
 import { SearchComponent } from './components/search-vale/search.component';
 import { MenuEliPComponent } from './components/menu-eli-p/menu-eli-p.component';
+import { DonutComponent } from './components/donut/donut.component';
 
 registerLocaleData(es);
 
@@ -29,6 +30,7 @@ registerLocaleData(es);
     AppComponent,
     SearchComponent,
     MenuEliPComponent,
+    DonutComponent,
   ],
   imports: [
     BrowserModule,
