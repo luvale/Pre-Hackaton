@@ -23,6 +23,13 @@ import { SearchComponent } from './components/search-vale/search.component';
 import { MenuEliPComponent } from './components/menu-eli-p/menu-eli-p.component';
 import { DonutComponent } from './components/donut/donut.component';
 
+// AG CHARTS
+import { AgChartsAngularModule } from 'ag-charts-angular';
+
+// NGX ECHARTS
+import { NgxEchartsModule } from 'ngx-echarts';
+
+
 registerLocaleData(es);
 
 @NgModule({
@@ -41,7 +48,11 @@ registerLocaleData(es);
     BrowserAnimationsModule,
     NzInputModule,
     NzButtonModule,
-    NzIconModule
+    NzIconModule,
+    AgChartsAngularModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
   ],
   providers: [{ provide: NZ_I18N, useValue: es_ES }],
   bootstrap: [AppComponent]
